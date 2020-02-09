@@ -16,4 +16,4 @@ npm start
 ``` 
 go to [http://localhost:3000/](http://localhost:3000/)
 
-![screenshot](/public/img/18-workout-screenshot.gif)
+![screenshot](/public/img/18-workout-tracker-screenshot.gif)
