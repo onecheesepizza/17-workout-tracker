@@ -4,6 +4,16 @@ body {
   background-color: black;
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 500ms;
+  transition-timing-function: ease-out;
+}
+li, button, a {
+  transition: opacity 50ms !important;
+  transition-timing-function: ease-out;
+}
+#load {
+  opacity: 1;
 }
 .container-sm {
   max-width: 400px !important;

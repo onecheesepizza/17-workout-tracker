@@ -1,3 +1,4 @@
+$(document).ready(function() {
 //query API
 $.getJSON( "/api/workouts", function( workouts ) {
     const length = workouts.length;
@@ -30,4 +31,7 @@ $.getJSON( "/api/workouts", function( workouts ) {
     };
     //add HTML to page
     $("#workouts").html(listHTML);
+    //reveal page HTML (happening now to avoid flash of unstyled content)
+    $("body").css({"opacity": "1"});
   });
+});

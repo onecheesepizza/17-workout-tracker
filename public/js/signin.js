@@ -35,4 +35,6 @@ $(document).ready(function() {
         console.log(err);
       });
   }
+  //reveal page HTML (happening now to avoid flash of unstyled content)
+  $("body").css({"opacity": "1"});
 });
