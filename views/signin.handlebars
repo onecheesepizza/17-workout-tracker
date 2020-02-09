@@ -1,0 +1,22 @@
+{{!-- header --}}
+{{> title }}
+{{!-- login form --}}
+<div class="row">
+  <form id="login" action="/api/users/login" method="POST">
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input type="text" class="form-control" id="username">
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" id="password">
+    </div>
+    <button type="submit" class="btn btn-primary">Sign In</button>
+  </form>
+</div>
+{{!-- submit button --}}
+<div class="row">
+  <a class="center" href="/signup/">Create Account</a>
+</div>
+{{!-- js --}}
+<script type="text/javascript" src="/js/signin.js"></script>

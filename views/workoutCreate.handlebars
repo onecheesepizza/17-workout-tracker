@@ -1,0 +1,29 @@
+{{!-- header --}}
+<div class="row">
+    <h1 id="title-workout">New Workout</h1>
+</div>
+{{!-- back --}}
+<div class="row">
+    <a id="back" href="/workouts/">< Back</a>
+</div>
+<br>
+{{!-- create workout form --}}
+<div class="row">
+    <form id="workoutCreateForm" class="center" action="/api/workouts" method="POST">
+        {{!-- first name --}}
+        <div class="form-group">
+            <label for="workoutType">Activity: </label>
+            <input type="text" class="form-control" id="workoutType">
+        </div>
+        {{!-- last name --}}
+        <div class="form-group">
+            <label for="workoutLength">Workout Length (mins): </label>
+            <input type="text" class="form-control" id="workoutLength">
+        </div>
+        <button id="addWorkout" type="button" class="btn btn-primary">Add Workout</button>
+    </form>
+</div>
+{{!-- footer --}}
+{{> footer }}
+{{!-- js --}}
+<script src="/js/workoutCreate.js"></script>
