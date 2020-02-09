@@ -10,12 +10,19 @@ $.getJSON(queryURL, function(workout) {
   //parse workout timestamp
   const timeStamp = Date.parse(workout.timestamp);
   var workoutDate = new Date(timeStamp);
-  //build HTML template, with create links for blank character slows
+  //pluralize 'minute' only if workoutLength is not 1
+  let workoutLengthStr = ``;
+  if (workout.workoutLength == 1) {
+      workoutLengthStr = `${workout.workoutLength} Minute`
+  } else {
+      workoutLengthStr = `${workout.workoutLength} Minutes`
+  }
+  //build HTML template
   let htmlTemplate = `
     <ul>
         <li>Date: ${workoutDate.toLocaleDateString("en-US")}</li>
         <li>Type: ${workout.workoutType}</li>
-        <li>Duration: ${workout.workoutLength} Minutes</li>
+        <li>Duration: ${workoutLengthStr}</li>
     </ul>
     `;
   //add HTML to page
