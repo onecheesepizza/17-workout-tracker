@@ -22,7 +22,7 @@ $(document).ready(function() {
     let htmlTemplate = `
       <ul>
           <li>Date: ${workoutDate.toLocaleDateString("en-US")}</li>
-          <li>Type: ${workout.workoutType}</li>
+          <li>Activity: ${workout.workoutType}</li>
           <li>Duration: ${workoutLengthStr}</li>
       </ul>
       `;
