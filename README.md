@@ -1,7 +1,7 @@
 # 17-workout-tracker
 ## Unit 17 NoSQL Homework: Workout Tracker
 
-A Node.js user-authenticated web app, using using the MVC design pattern and a NoSQL database. Powered by Node.js, Express, MongoDB, Mongoose, Passport, Handlebars, Bootstrap, and jQuery.
+A Node.js user-authenticated web app using using the MVC design pattern and a NoSQL database. Powered by Node.js, Express, MongoDB, Mongoose, Passport, Handlebars, Bootstrap, and jQuery.
 
 ## Live Application
 Deployed at: [https://obscure-ridge-24953.herokuapp.com/](https://obscure-ridge-24953.herokuapp.com/)
