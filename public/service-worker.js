@@ -1,11 +1,6 @@
 const filesToCache = [
-    // '/',
     '/offline',
     '/error404',
-    '/home',
-    '/workout',
-    '/workouts',
-    '/api/workouts',
     '/manifest.webmanifest',
     '/favicon-16x16.png',
     '/favicon-32x32.png',
