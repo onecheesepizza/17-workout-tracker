@@ -16,7 +16,9 @@ $.getJSON( "/api/workouts", function( workouts ) {
             workoutLengthStr = `${workouts[i].workoutLength} Minutes`
         }
         listHTML+= `
-        <a href="/workouts/${workouts[i]["_id"]}">
+        <a href="/workout?id=${workouts[i]["_id"]}">
+        <link rel="prefetch" href="/workouts/${workouts[i]["_id"]}">
+        <link rel="prefetch" href="/api/workouts/${workouts[i]["_id"]}">
         <li id="workout-${i}" class="workout">
             <div class="row">
                 <div id="${workouts["_id"]}" class="col-12">

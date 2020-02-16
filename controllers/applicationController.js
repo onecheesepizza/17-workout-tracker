@@ -2,6 +2,9 @@
 exports.index = function(req, res) {
     res.render('home');
 };
+exports.home = function(req, res) {
+    res.render('home');
+};
 // /login
 exports.signin = function(req, res) {
     res.render('signin');
@@ -23,4 +26,12 @@ exports.workout = function(req, res) {
     } else {
         res.render("workout");
     }
+};
+// /404
+exports.error404 = function(req, res) {
+    res.render('error404');
+};
+// /offline
+exports.offline = function(req, res) {
+    res.render('offline');
 };

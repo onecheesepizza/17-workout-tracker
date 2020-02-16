@@ -1,7 +1,8 @@
 $(document).ready(function() {
   //get workout ID from URL
-  const pathArray = window.location.pathname.split("/");
-  const workoutID = pathArray[pathArray.length - 1];
+  var urlParams = new URLSearchParams(window.location.search);
+  const workoutID = urlParams.get('id');
+
   //build query URL from ID
   const queryURL = "/api/workouts/" + workoutID;
   //query API
