@@ -14,16 +14,3 @@
 <script type="text/javascript" src="/js/home.js"></script>
 <link rel="prefetch" href="/workouts">
 <link rel="prefetch" href="/api/workouts">
-<script>
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/service-worker.js')
-      .then(registration => {
-        console.log('Service Worker is registered', registration);
-      })
-      .catch(err => {
-        console.error('Registration failed:', err);
-      });
-    });
-  }
-</script>
