@@ -53,6 +53,6 @@
     "webpack-pwa-manifest": "^4.2.0"
   },
   "engines": {
-    "node": "7.8.0"
+    "node": "13.3.0"
   }
 }
