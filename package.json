@@ -10,7 +10,7 @@
     "start": "node ./bin/www",
     "webpack": "webpack --watch",
     "build": "npm run webpack",
-    "heroku-postbuild": "webpack -p",
+    "heroku-postbuild": "webpack",
     "test": "mocha"
   },
   "devDependencies": {
