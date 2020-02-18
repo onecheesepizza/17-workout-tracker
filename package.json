@@ -1,11 +1,8 @@
 {
-  "name": "TravelSecure-Mongo",
-  "version": "3.3.7+1",
-  "homepage": "https://sleepy-springs-57038.herokuapp.com/",
-  "author": "Omar Patel",
-  "license": {
-    "type": "MIT"
-  },
+  "name": "Workout Tracker",
+  "version": "2.1",
+  "homepage": "https://obscure-ridge-24953.herokuapp.com//",
+  "author": "Brian Moore",
   "scripts": {
     "start": "node ./bin/www",
     "webpack": "webpack --watch",
@@ -34,7 +31,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/OSP123/TravelSecure-Mongo.git"
+    "url": "https://github.com/onecheesepizza/17-workout-tracker"
   },
   "dependencies": {
     "babel-loader": "^8.0.6",
