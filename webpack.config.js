@@ -58,10 +58,10 @@ const config = {
       ignoreURLParametersMatching: [/\b(\w*id\w*)\b/],
       runtimeCaching: [
         {
-          // Match any request that ends with .png, .jpg, .jpeg or .svg.
+          // Match any request with /api/, or that ends with .png, .jpg, .jpeg or .svg.
           urlPattern: /(\/api\/)|\.(?:png|jpg|jpeg|svg|html)$/,
 
-          // Apply a cache-first strategy.
+          // Apply a network-first strategy.
           handler: "NetworkFirst"
         }
       ]
