@@ -16,4 +16,7 @@ npm start
 ``` 
 go to [http://localhost:3000/](http://localhost:3000/)
 
-![screenshot](/public/img/18-workout-screenshot.gif)
+## PWA Installation
+![screenshot](/public/img/18-workout-screenshot-pwa.gif)
+## App Use
+![screenshot](/public/img/18-workout-screenshot.gif)  
