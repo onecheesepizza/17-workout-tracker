@@ -1,7 +1,7 @@
 # 17-workout-tracker
 ## Unit 17 NoSQL Homework: Workout Tracker
 
-A Node.js user-authenticated [progressive web app](https://en.wikipedia.org/wiki/Progressive_web_application) using using the MVC design pattern and a NoSQL database. Powered by Node.js, Express, MongoDB, Mongoose, Passport, Handlebars, Bootstrap, and jQuery.
+A user-authenticated Node.js [progressive web app](https://en.wikipedia.org/wiki/Progressive_web_application) demonstrating the MVC design pattern with a NoSQL database. Powered by Node.js, Express, MongoDB, Mongoose, Webpack, Workbox, Passport, Handlebars, Bootstrap, and jQuery.
 
 ## Live Application
 Deployed at: [https://obscure-ridge-24953.herokuapp.com/](https://obscure-ridge-24953.herokuapp.com/)
