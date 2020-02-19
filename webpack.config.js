@@ -2,10 +2,13 @@
 const WorkboxPlugin = require('workbox-webpack-plugin');
 const WebpackPwaManifest = require("webpack-pwa-manifest");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
 const path = require("path");
 
 const config = {
   entry: {
+    app: "./src/js/app.js",
     home: "./src/js/home.js",
     signin: "./src/js/signin.js",
     signup: "./src/js/signup.js",
@@ -18,28 +21,11 @@ const config = {
     filename: "[name].bundle.js"
   },
   mode: "production",
-  module: {
-    rules: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: {
-          loader: "babel-loader",
-          options: {
-            presets: ["@babel/preset-env"]
-          }
-        }
-      }
-    ]
-  },
   plugins: [
     new CleanWebpackPlugin(),
+    new MiniCssExtractPlugin({ filename: '/css/style.css' }),
     new WorkboxPlugin.GenerateSW({
       additionalManifestEntries: [
-        {
-          url: "/css/style.css",
-          revision: "null"
-        },
         {
           url: "/manifest.json",
           revision: "null"
@@ -98,7 +84,25 @@ const config = {
       ],
       fingerprints: false
     })
-  ]
+  ],
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env"]
+          }
+        }
+      },
+      { 
+        test: /\.scss$/, 
+        use: [ MiniCssExtractPlugin.loader, "css-loader", "sass-loader" ] 
+      }
+    ]
+  }
 };
 
 module.exports = config;

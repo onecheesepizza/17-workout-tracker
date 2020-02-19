@@ -1,3 +1,6 @@
+// sass variables
+$primary-color: #20b513;
+
 /* general styles */
 body {
   color:white;
@@ -33,7 +36,7 @@ button, .btn {
   font-style: italic;
 }
 a {
-  color: #20b513;
+  color: $primary-color;
   text-decoration: none !important;
 }
 a.delete {
@@ -41,7 +44,7 @@ a.delete {
   margin-top: 1em;
 }
 a:hover {
-  color: #20b513;
+  color: $primary-color;
   opacity: .9;
   text-decoration: none !important;
 }
@@ -49,7 +52,7 @@ a:hover {
   margin: 0 auto;
 }
 button, .btn {
-  background-color: #20b513 !important;
+  background-color: $primary-color !important;
   border: 2px solid white !important;
   width:100%;
 }
@@ -78,7 +81,7 @@ li {
   list-style: none;
   padding:.75em;
   margin:-1px 0 0 0;
-  background-color: #20b513 !important;
+  background-color: $primary-color !important;
   border: 2px solid white;
   height:3em;
   text-align: center;
