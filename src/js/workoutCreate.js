@@ -1,3 +1,4 @@
+import devTag from './app.js';
 $(document).ready(function() {
   $("#addWorkout").click(function(event) {
     event.preventDefault();
@@ -14,5 +15,7 @@ $(document).ready(function() {
   });
   //reveal page HTML (happening now to avoid flash of unstyled content)
   $("body").css({"opacity": "1"});
+  //dev tag    
+  devTag();
 });
 

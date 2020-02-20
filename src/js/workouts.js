@@ -1,3 +1,4 @@
+import devTag from './app.js';
 $(document).ready(function() {
 //query API
 $.getJSON( "/api/workouts", function( workouts ) {
@@ -35,5 +36,7 @@ $.getJSON( "/api/workouts", function( workouts ) {
     $("#workouts").html(listHTML);
     //reveal page HTML (happening now to avoid flash of unstyled content)
     $("body").css({"opacity": "1"});
+    //dev tag    
+    devTag();
   });
 });

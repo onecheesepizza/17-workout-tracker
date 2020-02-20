@@ -1,3 +1,4 @@
+import devTag from './app.js';
 $(document).ready(function() {
   //get workout ID from URL
   var urlParams = new URLSearchParams(window.location.search);
@@ -31,6 +32,8 @@ $(document).ready(function() {
     $("#workout-info").html(htmlTemplate);
     //reveal page HTML (happening now to avoid flash of unstyled content)
     $("body").css({"opacity": "1"});
+    //dev tag    
+    devTag();
     //add event listener to delete button
     $("#deleteWorkout").click(function(event) {
       //delete workout API call

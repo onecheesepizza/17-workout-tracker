@@ -1,3 +1,4 @@
+import devTag from './app.js';
 $(document).ready(function() {
   // Getting references to our form and inputs
   var loginForm = $("#login");
@@ -37,4 +38,6 @@ $(document).ready(function() {
   }
   //reveal page HTML (happening now to avoid flash of unstyled content)
   $("body").css({"opacity": "1"});
+  //dev tag    
+  devTag();
 });
