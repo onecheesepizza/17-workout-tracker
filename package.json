@@ -5,7 +5,7 @@
   "author": "Brian Moore",
   "license": "",
   "scripts": {
-    "start": "node ./bin/www",
+    "start": "concurrently \"webpack --watch\" \"node ./bin/www\"",
     "dev": "concurrently \"webpack --watch\" \"nodemon ./bin/www\"",
     "webpack": "webpack --watch",
     "build": "npm run webpack",
