@@ -5,11 +5,10 @@
   "author": "Brian Moore",
   "license": "",
   "scripts": {
-    "start": "concurrently \"webpack --watch\" \"node ./bin/www\"",
+    "start": "webpack && node ./bin/www",
     "dev": "concurrently \"webpack --watch\" \"nodemon ./bin/www\"",
-    "webpack": "webpack --watch",
-    "build": "npm run webpack",
-    "heroku-postbuild": "webpack -p",
+    "build": "webpack -p",
+    "heroku-postbuild": "npm run build",
     "test": "mocha"
   },
   "devDependencies": {
