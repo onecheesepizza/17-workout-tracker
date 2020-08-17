@@ -9,7 +9,7 @@
     "dev": "concurrently \"webpack --watch\" \"nodemon ./bin/www\"",
     "webpack": "webpack --watch",
     "build": "npm run webpack",
-    "heroku-postbuild": "webpack",
+    "heroku-postbuild": "webpack -p",
     "test": "mocha"
   },
   "devDependencies": {
