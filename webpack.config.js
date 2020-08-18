@@ -1,6 +1,4 @@
-// const SWPrecacheWebpackPlugin = require("sw-precache-webpack-plugin");
 const WorkboxPlugin = require('workbox-webpack-plugin');
-const WebpackPwaManifest = require("webpack-pwa-manifest");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
@@ -23,19 +21,26 @@ const config = {
   mode: "production",
   plugins: [
     new CleanWebpackPlugin(),
-    new MiniCssExtractPlugin({ filename: '/css/style.css' }),
+    new MiniCssExtractPlugin({ filename: 'css/style.css' }),
     new WorkboxPlugin.GenerateSW({
+      swDest: 'service-worker.js',
+      clientsClaim: true,
+      skipWaiting: true,
       additionalManifestEntries: [
         {
-          url: "/manifest.json",
+          url: "/manifest.webmanifest",
           revision: "null"
         },
         {
-          url: "/offline",
+          url: "/",
           revision: "null"
         },
         {
           url: "/signin",
+          revision: "null"
+        },
+        {
+          url: "/offline",
           revision: "null"
         },
         {
@@ -50,39 +55,66 @@ const config = {
           url: "/home",
           revision: "null"
         },
-        {
-          url: "/",
-          revision: "null"
-        }
       ],
-      ignoreURLParametersMatching: [/\b(\w*id\w*)\b/],
       runtimeCaching: [
+        // api calls
         {
-          // Match any request with /api/, or that ends with .png, .jpg, .jpeg or .svg.
-          urlPattern: /(\/api\/)|\.(?:png|jpg|jpeg|svg|html)$/,
-
-          // Apply a network-first strategy.
-          handler: "NetworkFirst"
-        }
+          urlPattern: /\b(?:https?:\/\/)?[^\/:]+\/.*?api/,
+          handler: 'NetworkFirst',
+          options: {
+            cacheName: 'api'
+          }
+        },
+        // images
+        {
+          urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
+          handler: 'CacheFirst',
+          options: {
+            cacheName: 'images',
+            expiration: {
+              maxEntries: 10,
+            },
+          },
+        },
+        // google fonts
+        {
+          urlPattern: /^https:\/\/fonts\.gstatic\.com/,
+          handler: 'StaleWhileRevalidate',
+          options: {
+            cacheName: 'google-fonts-webfonts'
+          }
+        },
+        {
+          urlPattern: /^https:\/\/fonts\.googleapis\.com/,
+          handler: 'StaleWhileRevalidate',
+          options: {
+            cacheName: 'google-fonts-webfonts'
+          }
+        },
+        // jquery
+        {
+          urlPattern: /^https:\/\/code\.jquery\.com/,
+          handler: 'StaleWhileRevalidate',
+          options: {
+            cacheName: 'jquery'
+          }
+        },
+        // bootstrap
+        {
+          urlPattern: /^https:\/\/stackpath\.bootstrapcdn\.com/,
+          handler: 'StaleWhileRevalidate',
+          options: {
+            cacheName: 'bootstrap'
+          }
+        },
+        {
+          urlPattern: /^https:\/\/cdn\.jsdelivr\.net/,
+          handler: 'StaleWhileRevalidate',
+          options: {
+            cacheName: 'bootstrap'
+          }
+        },
       ]
-    }),
-    new WebpackPwaManifest({
-      name: "Workout Tracker",
-      short_name: "Workout Tracker",
-      description: "Track your workouts.",
-      background_color: "#000000",
-      theme_color: "#20b513",
-      "theme-color": "#20b513",
-      start_url: "/home",
-      display: "standalone",
-      icons: [
-        {
-          src: path.resolve("./src/img/android-chrome-512x512.png"),
-          sizes: [96, 128, 192, 256, 384, 512],
-          destination: path.join("img", "icons")
-        }
-      ],
-      fingerprints: false
     })
   ],
   module: {
