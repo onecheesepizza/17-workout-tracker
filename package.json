@@ -5,7 +5,7 @@
   "author": "Brian Moore",
   "license": "",
   "scripts": {
-    "start": "webpack && node ./bin/www",
+    "start": "node ./bin/www",
     "dev": "concurrently \"webpack --watch\" \"nodemon ./bin/www\"",
     "build": "webpack -p",
     "heroku-prebuild": "npm install --dev",
