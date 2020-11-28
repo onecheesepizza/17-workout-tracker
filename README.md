@@ -5,7 +5,7 @@ A user-authenticated Node.js [progressive web app](https://en.wikipedia.org/wiki
 
 ## Live Application
 
-Live site: [https://ocp-workout-tracker.herokuapp.com/](https://ocp-workout-tracker.herokuapp.com)  
+Live site: [https://znode-workout-tracker.herokuapp.com/](https://znode-workout-tracker.herokuapp.com)  
 Deployed with [Heroku](https://www.heroku.com/) 
 
 ## Run Locally  
