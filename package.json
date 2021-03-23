@@ -13,31 +13,31 @@
     "test": "mocha"
   },
   "devDependencies": {
-    "babel-loader": "^8.1.0",
-    "chai": "^4.2.0",
+    "babel-loader": "^8.2.2",
+    "chai": "^4.3.4",
     "clean-webpack-plugin": "^3.0.0",
     "concurrently": "^5.3.0",
-    "css-loader": "^4.2.1",
-    "mini-css-extract-plugin": "^0.10.0",
+    "css-loader": "^4.3.0",
+    "mini-css-extract-plugin": "^0.10.1",
     "node-sass": "^4.14.1",
-    "nodemon": "^2.0.4",
+    "nodemon": "^2.0.7",
     "sass-loader": "^9.0.3",
     "webpack": "^4.46.0",
     "webpack-cli": "^3.3.12",
-    "workbox-webpack-plugin": "^5.1.3"
+    "workbox-webpack-plugin": "^5.1.4"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/onecheesepizza/17-workout-tracker"
   },
   "dependencies": {
-    "bcrypt": "^5.0.0",
+    "bcrypt": "^5.0.1",
     "body-parser": "^1.19.0",
     "connect-flash": "^0.1.1",
     "cookie-parser": "^1.4.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "express-handlebars": "^5.1.0",
+    "express-handlebars": "^5.2.1",
     "express-session": "^1.17.1",
     "mongoose": "^5.12.2",
     "morgan": "^1.10.0",
